@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #FF7000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#print-area {
+    display: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #print-area, #print-area * {
+        visibility: visible;
+    }
+    #print-area {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+}
+
+
+/* Estilo para cada item da lista de passageiros */
+#passenger-list li, #print-passenger-list li {
+    margin-top: 5px; /* Espaçamento superior */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo para o botão de exclusão */
+.delete-passenger {
+    position: absolute;
+    background-color: #d63c3c; /* Cor vermelha para o botão de exclusão */
+    color: white;
+    border: none;
+    padding: 5px 8px; /* Espaçamento interno menor (5px superior/inferior, 8px esquerda/direita) */
+    cursor: pointer;
+    width: 10%;
+    margin-left: 400px;
+    margin-bottom: 5px;
+    font-size: 0.8em; /* Tamanho de fonte menor para o botão */
+}
+
+/* Estilos para o texto do nome do passageiro */
+.passenger-name {
+    margin-left: 10px; /* Espaço à esquerda do nome do passageiro */
+    flex-grow: 1; /* Permite que o nome do passageiro ocupe o espaço restante */
+    overflow: hidden; /* Evita que o nome do passageiro vaze */
+    white-space: nowrap; /* Impede que o nome do passageiro quebre para uma nova linha */
+    text-overflow: ellipsis; /* Adiciona reticências (...) ao final do nome se ele vazar */
+}
+
+/* Estilos para tornar o design responsivo em telas pequenas */
+@media (max-width: 600px) {
+    body {
+        margin: 10px; /* Margem menor */
+    }
+    
+    h1, h2 {
+        font-size: 1.2em; /* Tamanho de fonte menor para títulos */
+    }
+
+    label {
+        margin-top: 5px; /* Menor espaçamento superior */
+    }
+
+    input, button {
+        width: 100%; /* Campos e botões ocupam toda a largura disponível */
+        margin-top: 3px; /* Menor espaçamento superior */
+    }
+
+    button {
+        margin-bottom: 10px; /* Espaçamento inferior para botões */
+    }
+
+    form {
+        display: flex; /* Flexbox para formulário */
+        flex-direction: column; /* Coloca elementos em coluna */
+    }
+
+    #trip-details, #print-trip-details {
+        font-size: 0.9em; /* Tamanho de fonte menor para detalhes da viagem */
+    }
+
+    .passenger-name {
+        margin-left: 0; /* Remove o espaço à esquerda do nome do passageiro em telas pequenas */
+    }
+
+    .delete-passenger {
+        font-size: 0.7em; /* Tamanho de fonte ainda menor para o botão de exclusão em telas pequenas */
+        padding: 3px 5px; /* Reduz o padding do botão */
+    }
+}
