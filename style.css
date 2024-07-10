@@ -9,7 +9,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ebe3de;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -32,29 +32,41 @@ input, button {
     box-sizing: border-box;
 }
 
+
+
+pre{
+
+    background-color: white;
+       
+}
+
 button {
     margin-top: 15px;
     background-color: #FF7000;
-    color: white;
+    color: rgb(15, 14, 14);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #FF4500;
+    background-color: #f7d476;
+    color: rgb(20, 18, 18);
 }
 
 ul {
-    list-style-type: none;
+    list-style-type:circle;
     padding: 0;
 }
 
 ul li {
-    margin-top: 5px;
+    
     display: flex;
     align-items: center;
+    color: rgb(7, 7, 7);
+           
 }
+
 
 #print-area {
     display: none;
@@ -84,19 +96,20 @@ ul li {
 #passenger-list li, #print-passenger-list li {
     margin-top: 5px; /* Espaçamento superior */
     align-items: center; /* Alinha verticalmente os itens */
+    
 }
 
 /* Estilo para o botão de exclusão */
 .delete-passenger {
-    position: absolute;
-    background-color: #d63c3c; /* Cor vermelha para o botão de exclusão */
-    color: white;
+    position: relative;
+    width: 20%;
+    background-color: #f0eaea; /* Cor vermelha para o botão de exclusão */
+    color: rgb(0, 0, 0);
     border: none;
+    margin-left: auto;
     padding: 5px 8px; /* Espaçamento interno menor (5px superior/inferior, 8px esquerda/direita) */
     cursor: pointer;
-    width: 10%;
-    margin-left: 400px;
-    margin-bottom: 5px;
+       
     font-size: 0.8em; /* Tamanho de fonte menor para o botão */
 }
 

@@ -18,10 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
             // Adiciona o nome do passageiro ao array e à lista exibida
             passengers.push(passengerName);
             const listItem = document.createElement('li');
-
+            
+            listItem.style.marginBottom="10px";
             // Cria o nome do passageiro
             listItem.textContent = passengerName;
-
+            
             // Cria o botão de exclusão para o passageiro
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Excluir';
