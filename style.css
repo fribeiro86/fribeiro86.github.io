@@ -102,10 +102,10 @@ ul li {
 
 #trip-details {
     font-family: Arial, sans-serif; /* Fonte */
-    font-size: 25px; /* Tamanho da fonte */
+    font-size: 14px; /* Tamanho da fonte */
     color: #333; /* Cor do texto */
     background-color: #f1efef; /* Cor de fundo */
-   
+    padding: 10px; /* Padding */
     border: 1px solid #ccc; /* Borda */
     border-radius: 4px; /* Bordas arredondadas */
     

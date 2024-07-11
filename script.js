@@ -86,14 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Função para exibir os detalhes da viagem
     function displayTripDetails(tripData) {
         tripDetails.textContent = `
-        Nome do Motorista: ${tripData.driverName}
-        Placa: ${tripData.plate}
-        Telefone: ${tripData.phone}
-        Data de Saída: ${tripData.departureDate}
-        Horário de Saída: ${tripData.departureTime}
-        Horário de Chegada: ${tripData.arrivalTime}
-        Destino: ${tripData.destination}
-        Passageiros Embarcados: ${tripData.passengerCount}
+        Nome do Motorista: ${tripData.driverName}("\n") 
+        Placa: ${tripData.plate}("\n")
+        Telefone: ${tripData.phone}("\n")
+        Data de Saída: ${tripData.departureDate}("\n")
+        Horário de Saída: ${tripData.departureTime}("\n")
+        Horário de Chegada: ${tripData.arrivalTime}("\n")
+        Destino: ${tripData.destination}("\n")
+        Passageiros Embarcados: ${tripData.passengerCount}("\n")
         Passageiros:
         ${tripData.passengers.join('\n')}        `;
     }
