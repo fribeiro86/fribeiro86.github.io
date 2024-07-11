@@ -107,18 +107,7 @@ ul li {
 }
 
 
-#trip-details {
-    
-    vertical-align: auto;
-    font-family: Arial, sans-serif; /* Fonte */
-    font-size: 20px; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
-    background-color: #f1efef; /* Cor de fundo */
-    padding: 10px; /* Padding */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 4px; /* Bordas arredondadas */
-    
-}
+
 
 /* Estilo para o botão de exclusão */
 .delete-passenger {
@@ -181,6 +170,9 @@ ul li {
     .delete-passenger {
         font-size: 0.7em; /* Tamanho de fonte ainda menor para o botão de exclusão em telas pequenas */
         padding: 3px 5px; /* Reduz o padding do botão */
+    }
+    h3,#print-passenger-list,#imagem{
+        margin-left: 55px;
     }
 }
 

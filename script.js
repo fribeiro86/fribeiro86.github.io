@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Copia a lista de passageiros para a área de impressão
         printPassengerList.innerHTML = '';
        
+        passengers.sort(); 
         passengers.forEach(passenger => {
             const listItem = document.createElement('li');
             listItem.textContent = passenger;
@@ -79,10 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // Copia os detalhes da viagem para a área de impressão
         printTripDetails.textContent = tripDetails.textContent;
         // Mostra a área de impressão
-        printArea.style.display = 'block';
+
+        
         window.print(); // Chama a função de impressão
-        // Esconde a área de impressão após a impressã
-       
+        printArea.style.display = 'block';
+        // Esconde a área de impressão após a impressão
+        printArea.style.display = 'none';
     });
 
     // Função para exibir os detalhes da viagem
@@ -91,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         tripDetails.textContent = `
-        Nome do Motorista: ${tripData.driverName}\n
+        Nome do Motorista: ${tripData.driverName}\n 
         Placa: ${tripData.plate}\n
         Telefone: ${tripData.phone}\n
         Data de Saída: ${tripData.departureDate}\n
