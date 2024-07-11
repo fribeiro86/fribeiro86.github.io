@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         printArea.style.display = 'block';
         window.print(); // Chama a função de impressão
         // Esconde a área de impressão após a impressão
-        printArea.style.display = 'none';
+       
     });
 
     // Função para exibir os detalhes da viagem
