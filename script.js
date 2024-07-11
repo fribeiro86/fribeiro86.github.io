@@ -113,5 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
         Passageiros Embarcados: ${passengers.length}\n
                 `;
     }
+
+    document.getElementById("restart").addEventListener("click", ()=>{
+
+        location.reload();
+    })    
+
 });
 
