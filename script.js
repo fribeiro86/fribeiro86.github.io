@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
              
             printArea.style.display = 'none';
             
-        }, 500);
+        }, 4000);
         
         
         
