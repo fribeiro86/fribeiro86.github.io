@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Mostra a área de impressão
         printArea.style.display = 'block';
         window.print(); // Chama a função de impressão
-        // Esconde a área de impressão após a impressão
+        // Esconde a área de impressão após a impressã
        
     });
 
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         tripDetails.textContent = `
-        Nome do Motorista: ${tripData.driverName}\n 
+        Nome do Motorista: ${tripData.driverName}\n
         Placa: ${tripData.plate}\n
         Telefone: ${tripData.phone}\n
         Data de Saída: ${tripData.departureDate}\n
