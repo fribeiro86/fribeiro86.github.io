@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const printTripDetails = document.getElementById('print-trip-details');
     const printButton = document.getElementById('print-button');
     const printArea = document.getElementById('print-area');
+    let totalPassageiro = 0; 
 
     // Array para armazenar os nomes dos passageiros
     const passengers = [];
@@ -16,13 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const passengerName = document.getElementById('passenger-name').value;
         if (passengerName) {
             // Adiciona o nome do passageiro ao array e à lista exibida
-            passengers.push(passengerName);
+            passengers.push(passengerName); 
             const listItem = document.createElement('li');
             
             listItem.style.marginBottom="10px";
             // Cria o nome do passageiro
             listItem.textContent = passengerName;
-            
+                        
             // Cria o botão de exclusão para o passageiro
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Excluir';
@@ -58,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
             departureTime: document.getElementById('departure-time').value,
             arrivalTime: document.getElementById('arrival-time').value,
             destination: document.getElementById('destination').value,
-            passengerCount: document.getElementById('passenger-count').value,
             passengers: passengers
         };
         // Exibe os detalhes da viagem
@@ -69,10 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
     printButton.addEventListener('click', () => {
         // Copia a lista de passageiros para a área de impressão
         printPassengerList.innerHTML = '';
+       
         passengers.forEach(passenger => {
             const listItem = document.createElement('li');
             listItem.textContent = passenger;
             printPassengerList.appendChild(listItem);
+           
         });
         // Copia os detalhes da viagem para a área de impressão
         printTripDetails.textContent = tripDetails.textContent;
@@ -85,17 +87,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Função para exibir os detalhes da viagem
     function displayTripDetails(tripData) {
+       
+        
+
         tripDetails.textContent = `
-        Nome do Motorista: ${tripData.driverName}("\n") 
-        Placa: ${tripData.plate}("\n")
-        Telefone: ${tripData.phone}("\n")
-        Data de Saída: ${tripData.departureDate}("\n")
-        Horário de Saída: ${tripData.departureTime}("\n")
-        Horário de Chegada: ${tripData.arrivalTime}("\n")
-        Destino: ${tripData.destination}("\n")
-        Passageiros Embarcados: ${tripData.passengerCount}("\n")
-        Passageiros:
-        ${tripData.passengers.join('\n')}        `;
+        Nome do Motorista: ${tripData.driverName}\n 
+        Placa: ${tripData.plate}\n
+        Telefone: ${tripData.phone}\n
+        Data de Saída: ${tripData.departureDate}\n
+        Horário de Saída: ${tripData.departureTime}\n
+        Horário de Chegada: ${tripData.arrivalTime}\n
+        Destino: ${tripData.destination}\n
+        Passageiros Embarcados: ${passengers.length}\n
+                `;
     }
 });
 

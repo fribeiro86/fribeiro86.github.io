@@ -36,9 +36,16 @@ input, button {
 
 pre{
 
+    font-weight: bold;
     background-color: white;
+    text-align:left
        
 }
+h3,#print-passenger-list,#imagem{
+    margin-left: 75px;
+}
+
+
 
 button {
     margin-top: 15px;
@@ -101,8 +108,10 @@ ul li {
 
 
 #trip-details {
+    
+    vertical-align: auto;
     font-family: Arial, sans-serif; /* Fonte */
-    font-size: 14px; /* Tamanho da fonte */
+    font-size: 20px; /* Tamanho da fonte */
     color: #333; /* Cor do texto */
     background-color: #f1efef; /* Cor de fundo */
     padding: 10px; /* Padding */
