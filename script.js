@@ -84,14 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
         window.print();
 
         // Esconde a área de impressão após a impressão
-        setTimeout(() => {
+        
+        /*setTimeout(() => {
 
              
             printArea.style.display = 'none';
             
         }, 4000);
         
-        
+        */
         
         
     });
