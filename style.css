@@ -55,7 +55,7 @@ button:hover {
 }
 
 ul {
-    list-style-type:circle;
+    list-style-type: circle;
     padding: 0;
 }
 
@@ -86,7 +86,7 @@ ul li {
         top: 0;
         width: 100%;
         padding: 20px;
-        background-color: #fff;
+        background-color: #080808;
         border: 1px solid #ccc;
     }
 }
@@ -96,6 +96,18 @@ ul li {
 #passenger-list li, #print-passenger-list li {
     margin-top: 5px; /* Espaçamento superior */
     align-items: center; /* Alinha verticalmente os itens */
+    
+}
+
+
+#trip-details {
+    font-family: Arial, sans-serif; /* Fonte */
+    font-size: 25px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    background-color: #f1efef; /* Cor de fundo */
+   
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 4px; /* Bordas arredondadas */
     
 }
 
@@ -109,7 +121,6 @@ ul li {
     margin-left: auto;
     padding: 5px 8px; /* Espaçamento interno menor (5px superior/inferior, 8px esquerda/direita) */
     cursor: pointer;
-       
     font-size: 0.8em; /* Tamanho de fonte menor para o botão */
 }
 
@@ -163,3 +174,4 @@ ul li {
         padding: 3px 5px; /* Reduz o padding do botão */
     }
 }
+

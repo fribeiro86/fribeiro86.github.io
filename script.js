@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Adiciona o botão de exclusão ao item da lista
             listItem.appendChild(deleteButton);
-
+           
             // Adiciona o item à lista de passageiros
+            
             passengerList.appendChild(listItem);
-
             // Limpa o campo de entrada do nome do passageiro
             document.getElementById('passenger-name').value = '';
         }
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         printArea.style.display = 'block';
         window.print(); // Chama a função de impressão
         // Esconde a área de impressão após a impressão
-        printArea.style.display = 'none';
+        
     });
 
     // Função para exibir os detalhes da viagem
@@ -93,10 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
         Horário de Saída: ${tripData.departureTime}
         Horário de Chegada: ${tripData.arrivalTime}
         Destino: ${tripData.destination}
-        Passageiros Embarcados (quantidade): ${tripData.passengerCount}
+        Passageiros Embarcados: ${tripData.passengerCount}
         Passageiros:
-        ${tripData.passengers.join('\n')}
-        `;
+        ${tripData.passengers.join('\n')}        `;
     }
 });
 
