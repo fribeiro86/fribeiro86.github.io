@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leitor de QR Code</title>
+    <title>Leitor de QR Code e Código de Barras</title>
     <link rel="stylesheet" href="../Nova pasta (2)/style.css">
 </head>
 <body>
-    <h1>Leitor de QR Code</h1>
-    <div id="qr-reader" width="600px"></div>
+    <h1>Leitor de QR Code e Código de Barras</h1>
+    <video id="preview"></video>
+    <canvas id="canvas" hidden></canvas>
     <div id="result">
         <h2>Resultado:</h2>
         <p id="result-text"></p>
     </div>
-    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
     <script src="../Nova pasta (2)/script.js"></script>
 </body>
 </html>
+
