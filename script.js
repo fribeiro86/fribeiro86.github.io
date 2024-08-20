@@ -3,18 +3,22 @@ const canvasElement = document.getElementById('canvas');
 const canvas = canvasElement.getContext('2d');
 const outputData = document.getElementById('outputData');
 
-// Solicita o uso da câmera traseira
-navigator.mediaDevices.getUserMedia({ 
-    video: { facingMode: { exact: 'environment' } } 
+
+navigator.mediaDevices.getUserMedia({
+    video: {
+        facingMode: 'environment' // Sugere o uso da câmera traseira, mas não força
+    }
 }).then(function(stream) {
     video.srcObject = stream;
-    video.setAttribute('playsinline', true); // Evita o modo de tela cheia em iOS
+    video.setAttribute('playsinline', true); // Evita o fullscreen no iOS
     video.play();
     requestAnimationFrame(tick);
-}).catch(function(error) {
-    console.error('Erro ao acessar a câmera traseira:', error);
-    alert('Não foi possível acessar a câmera traseira. Verifique as permissões ou tente novamente.');
+}).catch(function(err) {
+    console.error("Erro ao acessar a câmera: ", err);
+    alert("Não foi possível acessar a câmera. Verifique as permissões e tente novamente.");
 });
+
+
 
 function tick() {
     if (video.readyState === video.HAVE_ENOUGH_DATA) {
